@@ -61,7 +61,7 @@ module Azure
                       end || nil
 
       Faraday.new(uri, ssl: ssl_options, proxy: proxy_options) do |conn|
-        conn.use FaradayMiddleware::FollowRedirects
+        conn.response :follow_redirects
         conn.adapter Faraday.default_adapter
       end
     end
