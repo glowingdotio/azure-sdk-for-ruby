@@ -21,7 +21,7 @@ require 'uri'
 require 'rexml/document'
 require 'addressable/uri'
 require 'faraday'
-require 'faraday_middleware'
+require 'faraday/follow_redirects'
 require 'azure/core'
 
 module Azure
